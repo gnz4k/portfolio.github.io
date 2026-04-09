@@ -1,7 +1,7 @@
 # Portfolio
 
 This is a portfolio website for me (Gonza).
-Website: https://gnz4k.github.io/portfolio.github.io/
+Website: https://gnz4k.github.io/portfolio/
 
 ## Features
 
