@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gnz4k's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,12 +15,10 @@
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <div class="logo-container">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2">
-          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-          <polyline points="2 17 12 22 22 17"></polyline>
-          <polyline points="2 12 12 17 22 12"></polyline>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.926 23.998 0 18.892 5.075.002 24 5.108ZM15.348 10.09l-5.282-1.453-1.414 5.273 5.282 1.453z" />
         </svg>
-        <h1>DEV PORTFOLIO</h1>
+        <h1>GNZ4K</h1>
       </div>
       <nav class="nav-menu">
         <div class="nav-section">MAIN</div>
@@ -55,84 +54,91 @@
           Contact Me
         </button>
       </nav>
-
-      <div class="sidebar-user">
-        <div class="user-avatar">
-          <img id="sidebar-avatar-img" src="https://i.pravatar.cc/150?img=68" alt="Avatar">
-          <div class="status-indicator online"></div>
-        </div>
-        <div class="user-info">
-          <div class="user-name">Gonzalo</div>
-          <div class="user-status">Available</div>
-        </div>
-      </div>
     </aside>
+
     <!-- Main Content Area -->
     <main class="main-content">
       <header class="content-header">
-        <div class="search-bar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input type="text" placeholder="Search my portfolio...">
+
+        <!-- Search Container with Auto-complete -->
+        <div class="search-container">
+          <div class="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="portfolio-search" placeholder="Search my portfolio..." autocomplete="off">
+          </div>
+          <!-- Dropdown items will be injected here via JS -->
+          <div id="search-dropdown" class="search-dropdown"></div>
         </div>
+
         <div class="header-actions">
-          <button class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <button class="icon-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
               <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </svg></button>
+            </svg>
+          </button>
           <div class="wallet">
-            <span class="vp">HIRE ME</span>
-            <span class="rp">RESUME</span>
+            <span class="vp" id="hire-me-btn">HIRE ME</span>
           </div>
         </div>
       </header>
+
       <div class="views-container">
+
         <!-- HOME VIEW -->
         <section id="view-home" class="view active">
           <div class="hero-card">
             <div class="hero-bg" id="hero-card-bg"></div>
             <div class="hero-content">
               <div class="player-rank">
-                <div class="rank-icon">RBX</div>
-                <span>ROBLOX DEVELOPER</span>
+                <div class="rank-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.926 23.998 0 18.892 5.075.002 24 5.108ZM15.348 10.09l-5.282-1.453-1.414 5.273 5.282 1.453z" />
+                  </svg>
+                </div>
+                <span>FULL-STACK & ROBLOX MULTI-DISCIPLINARY</span>
               </div>
-              <h1 class="player-name">Gonzalo <span class="player-tag">Dev</span></h1>
-              <div class="player-level" id="hero-player-level">Scripting, UI Design & Animations</div>
+              <h1 class="player-name">Gonza</h1>
+              <div class="player-level" id="hero-player-level">Roblox Luau, Python, HTML, CSS & JavaScript</div>
 
               <div class="level-progress">
                 <div class="progress-bar">
                   <div class="progress-fill" style="width: 100%"></div>
                 </div>
-                <span class="progress-text">3 YEARS OF EXPERIENCE</span>
+                <span class="progress-text">4 YEARS OF PROFESSIONAL EXPERIENCE</span>
               </div>
             </div>
           </div>
-          <h2 class="section-title">EXPERIENCE</h2>
+
+          <h2 id="focus-home" class="section-title">CORE FOCUS AREAS</h2>
           <div class="stats-grid">
             <div class="stat-card glass-card">
-              <h3>Scripting</h3>
-              <div class="stat-value text-green">3 Yrs</div>
-              <div class="stat-sub">Luau & Frameworks</div>
+              <h3>Roblox Development</h3>
+              <div class="stat-value text-crimson">Luau</div>
+              <div class="stat-sub">Advanced Scripting & Frameworks</div>
             </div>
             <div class="stat-card glass-card">
-              <h3>UI Design</h3>
-              <div class="stat-value text-cyan">3 Yrs</div>
-              <div class="stat-sub">Roblox GUI & Layouts</div>
+              <h3>Automation & Tooling</h3>
+              <div class="stat-value text-crimson">Python</div>
+              <div class="stat-sub">Scripts & API Integrations</div>
             </div>
             <div class="stat-card glass-card">
-              <h3>Animations</h3>
-              <div class="stat-value text-yellow">2 Yrs</div>
-              <div class="stat-sub">Character & Combat Props</div>
+              <h3>Frontend Web</h3>
+              <div class="stat-value text-crimson">JS/CSS</div>
+              <div class="stat-sub">Responsive UI & Logic</div>
             </div>
             <div class="stat-card glass-card">
-              <h3>Current Focus</h3>
-              <div class="stat-value text-valo">ROBLOX</div>
-              <div class="stat-sub">Full Game Development</div>
+              <h3>Game Design</h3>
+              <div class="stat-value text-crimson">UX/UI</div>
+              <div class="stat-sub">Roblox GUI & User Flow</div>
             </div>
           </div>
         </section>
+
         <!-- PROJECTS VIEW -->
         <section id="view-projects" class="view">
           <div class="dashboard-header">
@@ -141,173 +147,240 @@
               <span class="pulse-dot"></span> STATUS: DEPLOYING
             </div>
           </div>
+
           <div class="telemetry-grid">
-            <div class="telemetry-card glass-card border-green">
-              <img src="https://placeco.de/400x200/101923/00ff99?text=Your+Project+Image+Here" alt="Project 1"
-                style="width: 100%; border-radius: 8px; margin-bottom: 16px; object-fit: cover;">
-              <div class="t-header">
-                <h3>Advanced Combat System</h3>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                </svg>
+
+            <!-- Project 1: Hephaestus -->
+            <div id="proj-heph" class="project-card project-border">
+              <div class="project-image-wrapper">
+                <img src="https://dummyjson.com/image/400x200/282828" alt="Hephaestus Automation">
               </div>
-              <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">A highly responsive melee and
-                ranged combat framework with block/parry mechanics.</p>
-              <div class="t-graph" style="height: auto;">
-                <span
-                  style="background: rgba(0,255,153,0.1); color: var(--green); padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 8px;">Luau</span>
-                <span
-                  style="background: rgba(0,255,153,0.1); color: var(--green); padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 8px;">Animations</span>
-                <span
-                  style="background: rgba(0,255,153,0.1); color: var(--green); padding: 4px 8px; border-radius: 4px; font-size: 12px;">VFX</span>
-              </div>
-            </div>
-            <div class="telemetry-card glass-card border-yellow">
-              <img src="https://placeco.de/400x200/101923/ffcc00?text=Your+Project+Image+Here" alt="Project 2"
-                style="width: 100%; border-radius: 8px; margin-bottom: 16px; object-fit: cover;">
-              <div class="t-header">
-                <h3>Interactive Main Menu</h3>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-              </div>
-              <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">A dynamic, animated 3D main
-                menu UI fully scripted with smooth transitions.</p>
-              <div class="t-graph" style="height: auto;">
-                <span
-                  style="background: rgba(255,204,0,0.1); color: var(--yellow); padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 8px;">UI
-                  Design</span>
-                <span
-                  style="background: rgba(255,204,0,0.1); color: var(--yellow); padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 8px;">Camera
-                  Manipulation</span>
-                <span
-                  style="background: rgba(255,204,0,0.1); color: var(--yellow); padding: 4px 8px; border-radius: 4px; font-size: 12px;">Tweens</span>
+              <div class="project-content">
+                <div class="t-header">
+                  <h3>Hephaestus (Automation Tool)</h3>
+                  <img src="https://skillicons.dev/icons?i=python" alt="Python" class="t-header-icon">
+                </div>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
+                  A powerful tool designed to automate asset management workflows for Roblox, including massive decal
+                  uploads, batch converting webp to png, and automating the upload of multiple gamepasses. Highly
+                  optimizes developer time.
+                </p>
+                <div class="t-graph">
+                  <span class="tag">Python</span>
+                  <span class="tag">Automation</span>
+                  <span class="tag">API</span>
+                </div>
               </div>
             </div>
-            <div class="telemetry-card glass-card">
-              <img src="https://placeco.de/400x200/101923/ff4655?text=Your+Project+Image+Here" alt="Project 3"
-                style="width: 100%; border-radius: 8px; margin-bottom: 16px; object-fit: cover;">
-              <div class="t-header">
-                <h3>Custom Simulator Framework</h3>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+
+            <!-- Project 2 -->
+            <div id="proj-web" class="project-card project-border">
+              <div class="project-image-wrapper">
+                <img src="https://dummyjson.com/image/400x200/282828" alt="Project 2">
               </div>
-              <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">A complete, scalable framework
-                for simulator games including pets, inventory, and shops.</p>
-              <div class="t-graph" style="height: auto;">
-                <span
-                  style="background: rgba(255,70,85,0.1); color: var(--valo-red); padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 8px;">Scripting</span>
-                <span
-                  style="background: rgba(255,70,85,0.1); color: var(--valo-red); padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 8px;">Datastores</span>
-                <span
-                  style="background: rgba(255,70,85,0.1); color: var(--valo-red); padding: 4px 8px; border-radius: 4px; font-size: 12px;">Client-Server
-                  Sync</span>
+              <div class="project-content">
+                <div class="t-header">
+                  <h3>Custom Web Dashboard</h3>
+                  <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="t-header-icon">
+                </div>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
+                  A fully responsive and dynamic web interface utilizing modern HTML, CSS, and JS to visualize data and
+                  manage administrative configurations.
+                </p>
+                <div class="t-graph">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
               </div>
             </div>
+
+            <!-- Project 3 -->
+            <div id="proj-roblox" class="project-card project-border">
+              <div class="project-image-wrapper">
+                <img src="https://dummyjson.com/image/400x200/282828" alt="Project 3">
+              </div>
+              <div class="project-content">
+                <div class="t-header">
+                  <h3>Roblox Game Framework</h3>
+                  <img src="https://skillicons.dev/icons?i=lua" alt="Lua" class="t-header-icon">
+                </div>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
+                  A complete, highly scalable Roblox framework including custom UI animations, player datastores,
+                  server-client sync structures, and highly optimized mechanics.
+                </p>
+                <div class="t-graph">
+                  <span class="tag">Luau</span>
+                  <span class="tag">UI Design</span>
+                  <span class="tag">Animations</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
+
         <!-- SKILLS VIEW -->
         <section id="view-skills" class="view">
           <div class="dashboard-header">
-            <h1 class="page-title">TECHNICAL SKILLS</h1>
+            <h1 class="page-title">TECHNICAL SKILLS & EXPERTISE</h1>
           </div>
+
           <div class="telemetry-grid">
-            <div class="telemetry-card glass-card">
-              <div class="t-header">
-                <h3>SCRIPTING (LUAU)</h3>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
+
+            <div id="skill-roblox" class="skill-category-card glass-card">
+              <h3>
+                <svg viewBox="0 0 24 24" fill="currentColor" style="color: white !important;">
+                  <path
+                    d="M18.926 23.998 0 18.892 5.075.002 24 5.108ZM15.348 10.09l-5.282-1.453-1.414 5.273 5.282 1.453z" />
                 </svg>
-              </div>
-              <div class="t-value">95%</div>
-              <div class="progress-ring-container">
-                <svg class="progress-ring" height="80" width="80">
-                  <circle stroke="rgba(255,255,255,0.1)" stroke-width="6" fill="transparent" r="34" cx="40" cy="40" />
-                  <circle stroke="var(--cyan)" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"
-                    stroke-dasharray="213" stroke-dashoffset="10" />
-                </svg>
-              </div>
-            </div>
-            <div class="telemetry-card glass-card">
-              <div class="t-header">
-                <h3>UI DESIGN (ROBLOX GUI)</h3>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <line x1="21.17" y1="8" x2="12" y2="8"></line>
-                  <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
-                  <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
-                </svg>
-              </div>
-              <div class="t-value">90%</div>
-              <div class="progress-ring-container">
-                <svg class="progress-ring" height="80" width="80">
-                  <circle stroke="rgba(255,255,255,0.1)" stroke-width="6" fill="transparent" r="34" cx="40" cy="40" />
-                  <circle stroke="var(--valo-red)" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"
-                    stroke-dasharray="213" stroke-dashoffset="21" />
-                </svg>
+                Roblox Ecosystem
+              </h3>
+              <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px; line-height: 1.5;">4 years of
+                deep experience building complex, performant, and scalable game components.</p>
+              <div class="skill-list">
+                <span class="skill-badge">
+                  <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.926 23.998 0 18.892 5.075.002 24 5.108ZM15.348 10.09l-5.282-1.453-1.414 5.273 5.282 1.453z" />
+                  </svg>
+                  Luau (Advanced)
+                </span>
+                <span class="skill-badge">Roblox Studio</span>
+                <span class="skill-badge">Client-Server Arch.</span>
+                <span class="skill-badge">Roblox UI/UX</span>
+                <span class="skill-badge">Datastores</span>
+                <span class="skill-badge">Animations</span>
+                <span class="skill-badge">Optimization</span>
               </div>
             </div>
-            <div class="telemetry-card glass-card">
-              <div class="t-header">
-                <h3>ANIMATIONS</h3>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                </svg>
-              </div>
-              <div class="t-value">80%</div>
-              <div class="progress-ring-container">
-                <svg class="progress-ring" height="80" width="80">
-                  <circle stroke="rgba(255,255,255,0.1)" stroke-width="6" fill="transparent" r="34" cx="40" cy="40" />
-                  <circle stroke="var(--yellow)" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"
-                    stroke-dasharray="213" stroke-dashoffset="42" />
-                </svg>
+
+            <div id="skill-python" class="skill-category-card glass-card">
+              <h3>
+                <img src="https://skillicons.dev/icons?i=python" alt="Python" class="header-skill-icon">
+                Automation & Scripting
+              </h3>
+              <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px; line-height: 1.5;">Proficient in
+                creating utilities and scripts to automate tedious workflows and enhance developer speed.</p>
+              <div class="skill-list">
+                <span class="skill-badge">
+                  <img src="https://skillicons.dev/icons?i=python" alt="Python" class="badge-skill-icon">
+                  Python
+                </span>
+                <span class="skill-badge">API Integration</span>
+                <span class="skill-badge">Batch Processing</span>
+                <span class="skill-badge">Data manipulation</span>
+                <span class="skill-badge">Web Scraping</span>
               </div>
             </div>
+
+            <div id="skill-web" class="skill-category-card glass-card">
+              <h3>
+                <img src="https://skillicons.dev/icons?i=html" alt="HTML5" class="header-skill-icon">
+                Web Development Stack
+              </h3>
+              <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px; line-height: 1.5;">Skilled in
+                building highly polished, responsive, and interactive interfaces for the web.</p>
+              <div class="skill-list">
+                <span class="skill-badge">
+                  <img src="https://skillicons.dev/icons?i=html" alt="HTML5" class="badge-skill-icon">
+                  HTML5
+                </span>
+                <span class="skill-badge">
+                  <img src="https://skillicons.dev/icons?i=css" alt="CSS3" class="badge-skill-icon">
+                  CSS3
+                </span>
+                <span class="skill-badge">
+                  <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="badge-skill-icon">
+                  JavaScript
+                </span>
+                <span class="skill-badge">Responsive Design</span>
+                <span class="skill-badge">CSS Grid/Flexbox</span>
+                <span class="skill-badge">Glassmorphism</span>
+              </div>
+            </div>
+
           </div>
         </section>
+
         <!-- CONTACT VIEW -->
         <section id="view-contact" class="view">
           <h1 class="page-title">CONTACT ME</h1>
-          <div class="settings-container glass-card">
+          <div id="contact-details" class="settings-container glass-card">
             <div class="settings-group">
-              <h3>Get In Touch</h3>
+              <h3>Let's work together</h3>
+
               <div class="setting-item">
                 <div class="setting-info">
-                  <h4>Email</h4>
-                  <p>gonzalo@example.com</p>
+                  <div class="setting-title-row">
+                    <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" class="contact-skill-icon">
+                    <h4>Email</h4>
+                  </div>
+                  <p>gnz4kdev@gmail.com</p>
                 </div>
-                <button class="btn btn-danger">COPY</button>
+                <button class="btn btn-outline" onclick="copyToClipboard('gnz4kdev@gmail.com', this)">COPY
+                  EMAIL</button>
               </div>
+
               <div class="setting-item">
                 <div class="setting-info">
-                  <h4>Roblox Profile</h4>
-                  <p>roblox.com/users/12345/profile</p>
+                  <div class="setting-title-row">
+                    <svg class="contact-skill-icon simple-icon" role="img" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24h-2.19z" />
+                    </svg>
+                    <h4>X (Twitter)</h4>
+                  </div>
+                  <p>@g_nz4k</p>
                 </div>
-                <button class="btn btn-danger">VISIT</button>
+                <a href="https://x.com/g_nz4k" target="_blank" class="btn btn-outline"
+                  style="text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center;">VISIT
+                  X</a>
               </div>
+
               <div class="setting-item">
                 <div class="setting-info">
-                  <h4>Discord</h4>
-                  <p>gonzalo_dev</p>
+                  <div class="setting-title-row">
+                    <svg class="contact-skill-icon simple-icon" role="img" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    <h4>YouTube</h4>
+                  </div>
+                  <p>youtube.com/@gnz4k</p>
                 </div>
-                <button class="btn btn-danger">COPY</button>
+                <a href="https://youtube.com/@gnz4k" target="_blank" class="btn btn-outline"
+                  style="text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center;">VISIT
+                  CHANNEL</a>
               </div>
-            </div>
-            <div class="settings-actions">
-              <button class="btn btn-danger" style="width: 100%; justify-content: center;">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                  </path>
-                </svg>
-                SCHEDULE A CALL
-              </button>
+
+              <div class="setting-item">
+                <div class="setting-info">
+                  <div class="setting-title-row">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                      <path
+                        d="M18.926 23.998 0 18.892 5.075.002 24 5.108ZM15.348 10.09l-5.282-1.453-1.414 5.273 5.282 1.453z" />
+                    </svg>
+                    <h4>Roblox Profile</h4>
+                  </div>
+                  <p>roblox.com/users/1930795964/profile</p>
+                </div>
+                <a href="https://www.roblox.com/users/1930795964/profile" target="_blank" class="btn btn-primary"
+                  style="text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center;">VISIT
+                  PROFILE</a>
+              </div>
+
+              <div class="setting-item">
+                <div class="setting-info">
+                  <div class="setting-title-row">
+                    <img src="https://skillicons.dev/icons?i=discord" alt="Discord" class="contact-skill-icon">
+                    <h4>Discord</h4>
+                  </div>
+                  <p>g_onzaaa</p>
+                </div>
+                <button class="btn btn-outline" onclick="copyToClipboard('g_onzaaa', this)">COPY TAG</button>
+              </div>
+
             </div>
           </div>
         </section>
