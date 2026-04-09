@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gnz4k's Portfolio</title>
+  <link rel="icon" type="image/png" href="Assets/Icons/EvolvedBlocksIcon.png  ">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -143,8 +144,12 @@
         <section id="view-projects" class="view">
           <div class="dashboard-header">
             <h1 class="page-title">RECENT PROJECTS</h1>
-            <div class="game-status active-game">
-              <span class="pulse-dot"></span> STATUS: DEPLOYING
+            <div class="game-status active-game youtube-link" onclick="navigateTo('view-contact')">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px; margin-right: 8px;">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              WATCH ON YOUTUBE
             </div>
           </div>
 
@@ -153,66 +158,134 @@
             <!-- Project 1: Hephaestus -->
             <div id="proj-heph" class="project-card project-border">
               <div class="project-image-wrapper">
-                <img src="https://dummyjson.com/image/400x200/282828" alt="Hephaestus Automation">
+                <img src="Assets/Banners/Hephaestus.png" alt="Hephaestus Engine">
               </div>
               <div class="project-content">
                 <div class="t-header">
-                  <h3>Hephaestus (Automation Tool)</h3>
+                  <h3>Hephaestus Engine</h3>
                   <img src="https://skillicons.dev/icons?i=python" alt="Python" class="t-header-icon">
                 </div>
-                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
-                  A powerful tool designed to automate asset management workflows for Roblox, including massive decal
-                  uploads, batch converting webp to png, and automating the upload of multiple gamepasses. Highly
-                  optimizes developer time.
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">
+                  An industrial-scale automation suite designed for Roblox developers. It centralizes asset pipelines
+                  and monetization workflows by integrating deeply with Roblox Open Cloud APIs.
                 </p>
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <p><strong>Bulk Automation:</strong> Deploy and configure hundreds of assets and monetization
+                      products in a single atomic session.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Robust Architecture:</strong> Hybrid micro-service pattern with decoupled business logic
+                      and a premium web-view interface.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Premium UI/UX:</strong> Glassmorphism-based hybrid GUI with real-time bridge-pattern
+                      communication between Python and JS.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Advanced Engineering:</strong> Implements asynchronous multi-threading, strategic API
+                      polling, and rate-limiting prevention.</p>
+                  </div>
+                </div>
                 <div class="t-graph">
                   <span class="tag">Python</span>
-                  <span class="tag">Automation</span>
-                  <span class="tag">API</span>
+                  <span class="tag">Open Cloud</span>
+                  <span class="tag">Asynchronous</span>
+                  <span class="tag">Pillow</span>
+                  <span class="tag">Requests</span>
                 </div>
               </div>
             </div>
 
-            <!-- Project 2 -->
-            <div id="proj-web" class="project-card project-border">
-              <div class="project-image-wrapper">
-                <img src="https://dummyjson.com/image/400x200/282828" alt="Project 2">
-              </div>
-              <div class="project-content">
-                <div class="t-header">
-                  <h3>Custom Web Dashboard</h3>
-                  <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="t-header-icon">
-                </div>
-                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
-                  A fully responsive and dynamic web interface utilizing modern HTML, CSS, and JS to visualize data and
-                  manage administrative configurations.
-                </p>
-                <div class="t-graph">
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-              </div>
-            </div>
+            <!-- Project 2 (REMOVED: Custom Web Dashboard) -->
+            <!-- Project 3 (REMOVED: Roblox Game Framework) -->
 
-            <!-- Project 3 -->
-            <div id="proj-roblox" class="project-card project-border">
+            <!-- Project 3: Procedural World Engine -->
+            <div id="proj-procedural-world" class="project-card project-border">
               <div class="project-image-wrapper">
-                <img src="https://dummyjson.com/image/400x200/282828" alt="Project 3">
+                <img src="Assets/Banners/PerlinProject.png" alt="Procedural World Engine">
               </div>
               <div class="project-content">
                 <div class="t-header">
-                  <h3>Roblox Game Framework</h3>
-                  <img src="https://skillicons.dev/icons?i=lua" alt="Lua" class="t-header-icon">
+                  <h3>Procedural World Engine</h3>
+                  <img src="https://skillicons.dev/icons?i=lua" alt="Luau" class="t-header-icon">
                 </div>
-                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.6;">
-                  A complete, highly scalable Roblox framework including custom UI animations, player datastores,
-                  server-client sync structures, and highly optimized mechanics.
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">
+                  A high-performance terrain generation system for Roblox, designed to deliver infinite voxel
+                  environments. Built using Parallel Luau and Data-Oriented Programming (DOP) principles.
                 </p>
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <p><strong>High Performance:</strong> Multi-threaded generation using Roblox's Actor threading model
+                      to parallelize voxel arithmetic.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Infinite Streaming:</strong> Seamless chunk streaming system based on player position
+                      with dynamic loading and proactive memory pooling.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Bioclimatic Sampling:</strong> Advanced biome modeling based on temperature and humidity
+                      maps with Whittaker-driven climate diagrams.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Geometry Optimization:</strong> Integrated Greedy Meshing algorithm to drastically reduce
+                      part count and minimize Draw Calls.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Distributed AI:</strong> Autonomous NPC system leveraging Actor-based asynchronous
+                      processing for complex independent entity logic.</p>
+                  </div>
+                </div>
                 <div class="t-graph">
                   <span class="tag">Luau</span>
-                  <span class="tag">UI Design</span>
-                  <span class="tag">Animations</span>
+                  <span class="tag">Parallel Luau</span>
+                  <span class="tag">Voxel Engine</span>
+                  <span class="tag">Greedy Meshing</span>
+                  <span class="tag">Buffer API</span>
+                  <span class="tag">Object Pooling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4: Project GK | VAL -->
+            <div id="proj-gk-val" class="project-card project-border">
+              <div class="project-image-wrapper">
+                <img src="Assets/Banners/ProjectGK.png" alt="Project GK | VAL">
+              </div>
+              <div class="project-content">
+                <div class="t-header">
+                  <h3>Project GK | VAL</h3>
+                  <img src="https://skillicons.dev/icons?i=python" alt="Python" class="t-header-icon">
+                </div>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">
+                  A comprehensive Valorant intelligence solution featuring real-time telemetry and automated identity
+                  management. Built on a Signal-Driven architecture to bridge Riot Games' internal APIs.
+                </p>
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <p><strong>Asynchronous Arch:</strong> High availability via PySide6 and multi-threaded QThreads for
+                      non-blocking UI during data ingestion.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Account Hot-Swapping:</strong> Rapid identity switching engine using atomic file
+                      manipulation and psutil process overhead management.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Intelligence Engine:</strong> Real-time match state tracking and data hydration
+                      techniques to reconstruct live game chronologies.</p>
+                  </div>
+                  <div class="highlight-item">
+                    <p><strong>Self-Healing Logic:</strong> Hybrid authentication (Lockfile/Cookies) with automated
+                      token recovery and region-affinity detection.</p>
+                  </div>
+                </div>
+                <div class="t-graph">
+                  <span class="tag">Python</span>
+                  <span class="tag">PySide6</span>
+                  <span class="tag">Qt 6</span>
+                  <span class="tag">REST APIs</span>
+                  <span class="tag">Multi-threading</span>
+                  <span class="tag">Discord RPC</span>
                 </div>
               </div>
             </div>

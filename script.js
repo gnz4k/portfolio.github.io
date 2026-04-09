@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Expose to window for inline calls
+  window.navigateTo = navigateTo;
+
   navItems.forEach(item => {
     item.addEventListener('click', () => {
       const targetId = item.getAttribute('data-target');
@@ -51,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { label: "Home Page", target: "view-home" },
     { label: "Experience & Focus", target: "view-home", elementId: "focus-home", focusClass: "highlight-focus-text" },
     { label: "My Projects", target: "view-projects" },
-    { label: "Project: Hephaestus (Python Automation)", target: "view-projects", elementId: "proj-heph" },
-    { label: "Project: Custom Web Dashboard", target: "view-projects", elementId: "proj-web" },
-    { label: "Project: Roblox Game Framework", target: "view-projects", elementId: "proj-roblox" },
+    { label: "Project: Hephaestus Engine", target: "view-projects", elementId: "proj-heph" },
+    { label: "Project: Project GK | VAL (Valorant Intelligence)", target: "view-projects", elementId: "proj-gk-val" },
+    { label: "Project: Procedural World Engine", target: "view-projects", elementId: "proj-procedural-world" },
     { label: "Technical Skills", target: "view-skills" },
     { label: "Skills: Roblox Ecosystem & Luau", target: "view-skills", elementId: "skill-roblox" },
     { label: "Skills: Python & Auto Scripting", target: "view-skills", elementId: "skill-python" },
